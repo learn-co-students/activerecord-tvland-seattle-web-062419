@@ -25,11 +25,11 @@ describe Character do
     #are free to add methods that perform actions on the model's data
 
     urkel = Character.new(:name => "Steve Urkel")
-    urkel.catchphrase = "Did I do that?"
+    urkel.catch_phrase = "Did I do that?"
     urkel.save
-    expect(Character.find_by(:id => urkel.id).catchphrase).to eq(urkel.catchphrase)
+    expect(Character.find_by(:id => urkel.id).catch_phrase).to eq(urkel.catch_phrase)
 
-    expect(urkel.say_that_thing_you_say).to eq("#{urkel.name} always says: #{urkel.catchphrase}")
+    expect(urkel.say_that_thing_you_say).to eq("#{urkel.name} always says: #{urkel.catch_phrase}")
 
   end
 
